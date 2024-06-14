@@ -6,9 +6,13 @@ const getPosts = async () =>{
     const data = await res.json()
     return data
 }
+export const metadata = {
+    title: "Post",
+    description: "Next Hero Post Page",
+  };
 const PostsPage =async () => {
     const posts = await getPosts()
-    console.log(posts);
+    // console.log(posts);
     return (
         <section>
             <h1>Total Post : {posts.length}</h1>
